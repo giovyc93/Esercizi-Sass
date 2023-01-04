@@ -1,0 +1,45 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+div {
+    border: 1px solid $color-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        color: $color-tertiary;
+        text-decoration: underline $color-secondary;
+
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin: 15px;
+        
+
+    }
+    p{
+        border: 1px solid $color-tertiary;
+    }
+
+    #p1 {
+        color: $color-secondary;
+    }
+
+    #p2 {
+        color: $color-primary;  
+    }
+
+    #p3 {
+        color: $color-secondary;
+    }
+
+    #p4 {
+        color: $color-primary;
+    }
+}

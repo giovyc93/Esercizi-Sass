@@ -1,0 +1,90 @@
+.containerTotal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+}
+
+.containerSection1 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+}
+
+.containerSection2 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+}
+
+.article1 {
+  border: 1px solid;
+}
+
+.article2 {
+  border: 1px solid;
+}
+
+.title1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  border: solid, 1px;
+  font-size: 50px;
+}
+
+.article1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  border: solid, 1px;
+  font-size: 20px;
+}
+
+.article2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  border: solid, 1px;
+  font-size: 20px;
+}
+
+.article3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  border: solid, 1px;
+  font-size: 20px;
+}
+
+.article4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  border: solid, 1px;
+  font-size: 20px;
+}
+
+.article5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  border: solid, 1px;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

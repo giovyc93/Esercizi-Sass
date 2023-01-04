@@ -1,0 +1,63 @@
+@mixin containerStyle ($direction, $borderColor) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid $borderColor;
+    padding: 10px;
+}
+
+.containerTotal {
+    @include containerStyle(column,red)
+}
+
+.containerSection1 {
+    @include containerStyle(row,none)
+}
+
+.containerSection2 {
+    @include containerStyle(row,none)
+}
+
+
+
+
+@mixin articleStyle($color, $borderColor, $fontsize) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color;
+    border: 2px solid $borderColor;
+    font-size: $fontsize;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+.title1 {
+    @include articleStyle(green, green, 50px);
+
+
+}
+
+.article1 {
+    @include articleStyle(blue, green, 20px)
+}
+
+.article2 {
+    @include articleStyle(red, green, 20px)
+}
+.article3 {
+    @include articleStyle(blue, green, 20px)
+}
+.article4 {
+    @include articleStyle(red, green, 20px)
+}
+.article5 {
+    @include articleStyle(green,blue, 20px)
+}
