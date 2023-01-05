@@ -1,41 +1,53 @@
-@mixin containerStyle ($direction, $borderColor) {
+@import "moduli.scss";
+
+
+@function px-to-rem($px) {
+    $rem-size: 16px; 
+    @return ($px / $rem-size) * 1rem;
+  }
+
+
+
+
+
+
+
+
+
+@mixin containerStyle ($direction) {
     display: flex;
     flex-direction: $direction;
-    gap: 20px;
-    
     align-items: center;
     justify-items: center;
+    border: 1px solid $borderColor;
     padding: 10px;
 }
 
+
 .containerTotal {
-    @include containerStyle(column, red)
+    @include containerStyle(column)
 }
 
 .containerSection1 {
-    @include containerStyle(row,none)
+    @include containerStyle(row)
 }
 
 .containerSection2 {
-    @include containerStyle(row, blue)
-}
-.article1{
-    border: 1px solid ;
-}
-.article2 {
-    border: 1px solid ;
+    @include containerStyle(row)
 }
 
 
 
-@mixin articleStyle($color, $borderColor, $fontsize) {
+
+@mixin articleStyle() {
     display: flex;
     justify-content: center;
     align-items: center;
     color: $color;
-    border: solid, 1px;
-    
-    font-size: $fontsize;
+    border: 2px solid $borderColor;
+    font-size: px-to-rem(30px) ;
+    padding: px-to-rem(10px);
+    text-align: center;
     
 }
 
@@ -45,24 +57,24 @@
 
 
 .title1 {
-    @include articleStyle(green, none, 50px);
+    @include articleStyle();
 
 
 }
 
 .article1 {
-    @include articleStyle(blue, black, 20px)
+    @include articleStyle()
 }
 
 .article2 {
-    @include articleStyle(red, green, 20px)
+    @include articleStyle()
 }
 .article3 {
-    @include articleStyle(blue, green, 20px)
+    @include articleStyle()
 }
 .article4 {
-    @include articleStyle(red, green, 20px)
+    @include articleStyle()
 }
 .article5 {
-    @include articleStyle(green,blue, 20px)
+    @include articleStyle()
 }
