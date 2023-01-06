@@ -25,7 +25,7 @@
   padding: 10px;
 }
 
-.title1 {
+.titleClass, .titleClass__sub {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +34,11 @@
   font-size: 1.875rem;
   padding: 0.625rem;
   text-align: center;
+}
+
+.titleClass__sub {
+  font-size: 2.875rem;
+  border: solid red;
 }
 
 .article1 {

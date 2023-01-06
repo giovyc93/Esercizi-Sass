@@ -8,15 +8,15 @@
 }
 
 .containerTotal {
-    @include containerStyle(column,red)
+    @include containerStyle(column, red)
 }
 
 .containerSection1 {
-    @include containerStyle(row,none)
+    @include containerStyle(row, none)
 }
 
 .containerSection2 {
-    @include containerStyle(row,none)
+    @include containerStyle(row, none)
 }
 
 
@@ -31,7 +31,7 @@
     font-size: $fontsize;
     padding: 10px;
     text-align: center;
-    
+
 }
 
 
@@ -52,12 +52,15 @@
 .article2 {
     @include articleStyle(red, green, 20px)
 }
+
 .article3 {
     @include articleStyle(blue, green, 20px)
 }
+
 .article4 {
     @include articleStyle(red, green, 20px)
 }
+
 .article5 {
-    @include articleStyle(green,blue, 20px)
+    @include articleStyle(green, blue, 20px)
 }
