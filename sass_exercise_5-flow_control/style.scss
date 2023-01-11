@@ -1,0 +1,114 @@
+@function result($px) {
+    @return unquote(calc($px / 16px) + "rem");
+}
+
+$primaryC: red;
+$secondaryC: blue;
+$tertiaryC: green;
+$border1: 2px solid green;
+$border2: 2px solid blue;
+$border3: 2px solid red;
+$font_size: 16px;
+
+
+
+$sizes: 1rem, 2rem, 3rem;
+
+@each $size in $sizes {
+    .fs-#{$size} {
+        font-size: $size;
+        width: result(45px);
+        height: result(45px);
+    }
+}
+
+@for $var from 1 through 19 {
+    @if $var != 10 {
+      div[class^="fs"]:nth-child(#{$var}) {
+        background-color: darken(white, calc(5% * $var));
+        color: lighten(black, calc(5% * $var));
+      }
+    } @else {
+      div[class^="fs"]:nth-child(#{$var}) {
+        background-color: $secondaryC;
+        color: $primaryC;
+        font-weight: bold;
+      }
+    }
+
+}
+
+
+%standardTitle {
+    color: $tertiaryC;
+    text-align: center;
+    text-decoration: underline $secondaryC;
+}
+
+
+
+div {
+    border: $border3;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    gap: 10px;
+
+    h1 {
+        @extend %standardTitle;
+
+    }
+
+    h2 {
+        @extend %standardTitle;
+        padding: 1rem;
+        border: $border3;
+        width: fit-content;
+        margin: 0 auto;
+
+    }
+
+    section {
+        display: flex;
+
+        article {
+            &:nth-child(even) {
+                border: $border1;
+                color: $primaryC;
+                padding: 10px;
+                text-align: center;
+                font-size: result(16px);
+            }
+
+            &:nth-child(odd) {
+                border: $border1;
+                color: $secondaryC;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+
+        &:nth-child(even) {
+            min-width: 98.5%;
+
+
+
+
+        }
+
+        &:last-child {
+            width: 98.5%;
+
+            article {
+                border: $border2;
+                color: $tertiaryC;
+                min-width: 100%;
+                text-align: center;
+                font-size: result(24px);
+            }
+        }
+    }
+}
